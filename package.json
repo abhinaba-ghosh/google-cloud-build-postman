@@ -12,6 +12,7 @@
     "author": "askabhinaba@gmail.com",
     "license": "MIT",
     "dependencies": {
-        "newman": "^5.2.0"
+        "newman": "^5.2.0",
+        "newman-reporter-html": "^1.0.5"
     }
 }
