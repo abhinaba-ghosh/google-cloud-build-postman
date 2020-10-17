@@ -5,3 +5,5 @@ steps:
 - name: node
   entrypoint: npm
   args: ['test']
+  env:
+    - 'MY_KEY=${_MY_KEY}'
