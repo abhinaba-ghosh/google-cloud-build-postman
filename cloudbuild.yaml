@@ -6,4 +6,4 @@ steps:
   entrypoint: npm
   args: ['test']
   env:
-    - 'MY_KEY=${_MY_KEY}'
+    - 'MY_KEY=${_MY_KEY:1}'

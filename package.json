@@ -4,7 +4,7 @@
     "description": "Sample postman collection run",
     "main": "index.js",
     "scripts": {
-        "test": "newman run collections/collection.json -e environment/environment.json --env-var key=${MY_KEY:1}"
+        "test": "newman run collections/collection.json -e environment/environment.json --env-var key=$MY_KEY"
     },
     "keywords": [
         "postman"
