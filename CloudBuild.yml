@@ -4,4 +4,4 @@ steps:
   args: ['install']
 - name: node
   entrypoint: npm
-  args: ['test']
+  args: ['test','--env-var', 'key=${_MY_KEY}']
