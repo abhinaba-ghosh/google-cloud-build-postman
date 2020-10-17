@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "483f2ed3-af7f-41c6-a44d-1000075c256b",
+		"name": "Harry Potter World",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "The Dumbledores Army",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "38e6c059-cbdb-42fb-85cd-8cd7ccc6a0ed",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.expect(pm.response.json().length).to.greaterThan(0);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Check Harry Potter stats\", function () {",
+							"    const harry = pm.response.json().filter(h => h.name === \"Harry Potter\");",
+							"    pm.expect(harry[0].dumbledoresArmy).to.be.true;",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/characters?key={{key}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"characters"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{key}}"
+						},
+						{
+							"key": "dumbledoresArmy",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "house",
+							"value": "{{houseName}}",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

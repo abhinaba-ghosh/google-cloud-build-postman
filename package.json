@@ -1,0 +1,17 @@
+{
+    "name": "postman-collection-template",
+    "version": "1.0.0",
+    "description": "Sample postman collection run",
+    "main": "index.js",
+    "scripts": {
+        "test": "newman run collections/collection.json -e environment/environment.json"
+    },
+    "keywords": [
+        "postman"
+    ],
+    "author": "askabhinaba@gmail.com",
+    "license": "MIT",
+    "dependencies": {
+        "newman": "^5.2.0"
+    }
+}

@@ -1,0 +1,19 @@
+{
+	"id": "b160a5a5-a397-425f-b8f7-33f9ca307f06",
+	"name": "Harry_Potter_Environment",
+	"values": [
+		{
+			"key": "key",
+			"value": "$2a$10$Eb8YoPrvdcFgRLcUHkLrpOiBt.0QItnTH.JsDPfPYqxfdO1HiGC2G",
+			"enabled": true
+		},
+		{
+			"key": "url",
+			"value": "https://www.potterapi.com/v1",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2020-10-17T17:13:44.197Z",
+	"_postman_exported_using": "Postman/7.34.0"
+}
