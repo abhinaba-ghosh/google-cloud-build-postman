@@ -1,30 +1,21 @@
 {
 	"info": {
-		"_postman_id": "483f2ed3-af7f-41c6-a44d-1000075c256b",
-		"name": "Harry Potter World",
+		"_postman_id": "72bbe6fa-99b3-43a6-8132-ee3b919ef2a2",
+		"name": "PetStore",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "The Dumbledores Army",
+			"name": "GET Pets",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "38e6c059-cbdb-42fb-85cd-8cd7ccc6a0ed",
+						"id": "ad98d5b2-ce6b-4876-9907-06d00ce8addf",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
-							"    pm.expect(pm.response.json().length).to.greaterThan(0);",
-							"});",
-							"",
-							"",
-							"pm.test(\"Check Harry Potter stats\", function () {",
-							"    const harry = pm.response.json().filter(h => h.name === \"Harry Potter\");",
-							"    pm.expect(harry[0].dumbledoresArmy).to.be.true;",
-							"});",
-							"",
-							""
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -34,28 +25,59 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/characters?key={{key}}",
+					"raw": "https://petstore.swagger.io/v2/pet/1",
+					"protocol": "https",
 					"host": [
-						"{{url}}"
+						"petstore",
+						"swagger",
+						"io"
 					],
 					"path": [
-						"characters"
+						"v2",
+						"pet",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Stores",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6f78b26a-d4fe-47ee-82ac-f15587901190",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/store/inventory",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
 					],
-					"query": [
-						{
-							"key": "key",
-							"value": "{{key}}"
-						},
-						{
-							"key": "dumbledoresArmy",
-							"value": "true",
-							"disabled": true
-						},
-						{
-							"key": "house",
-							"value": "{{houseName}}",
-							"disabled": true
-						}
+					"path": [
+						"v2",
+						"store",
+						"inventory"
 					]
 				}
 			},
