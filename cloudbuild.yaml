@@ -2,6 +2,14 @@ steps:
 - name: node
   entrypoint: npm
   args: ['install']
+- name: node
+  entrypoint: npm
+  args: ['start']
+- name: node
+  entrypoint: npm
+  args: ['test']
+  env:
+    - 'URL=${_MY_LOCAL_URL}'
 - name: 'gcr.io/cloud-builders/gcloud'
   args:
   - functions
@@ -12,3 +20,5 @@ steps:
 - name: node
   entrypoint: npm
   args: ['test']
+  env:
+    - 'URL=${_MY_DEPLOYED_URL}'
