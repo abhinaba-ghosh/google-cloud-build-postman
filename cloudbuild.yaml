@@ -9,7 +9,6 @@ steps:
   - myWebsiteBackend
   - --source=.
   - --trigger-http
-  - --runtime nodejs10
 - name: node
   entrypoint: npm
   args: ['test']
