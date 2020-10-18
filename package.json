@@ -4,6 +4,7 @@
     "description": "Sample postman collection run",
     "main": "index.js",
     "scripts": {
+        "start": "node ./bin/www",
         "test": "newman run collections/collection.json -e environment/environment.json"
     },
     "keywords": [
@@ -11,8 +12,11 @@
     ],
     "author": "askabhinaba@gmail.com",
     "license": "MIT",
-    "devDependencies": {
-        "newman": "^5.2.0",
-        "newman-reporter-html": "^1.0.5"
+    "dependencies": {
+        "body-parser": "~1.18.2",
+        "cookie-parser": "~1.4.3",
+        "cors": "^2.8.4",
+        "express": "^4.16.4",
+        "newman": "^5.2.0"
     }
 }
