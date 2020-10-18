@@ -6,42 +6,6 @@
 	},
 	"item": [
 		{
-			"name": "GET Pets",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "ad98d5b2-ce6b-4876-9907-06d00ce8addf",
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://petstore.swagger.io/v2/pet/1",
-					"protocol": "https",
-					"host": [
-						"petstore",
-						"swagger",
-						"io"
-					],
-					"path": [
-						"v2",
-						"pet",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "GET Stores",
 			"event": [
 				{
@@ -67,15 +31,11 @@
 					}
 				],
 				"url": {
-					"raw": "https://petstore.swagger.io/v2/store/inventory",
-					"protocol": "https",
+					"raw": "{{url}}/store/inventory",
 					"host": [
-						"petstore",
-						"swagger",
-						"io"
+						"{{url}}"
 					],
 					"path": [
-						"v2",
 						"store",
 						"inventory"
 					]
