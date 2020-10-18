@@ -1,3 +1,5 @@
+<img src="./docs/logo.png" width="700px" height="300px">
+
 ### google-cloud-build-postman
 
 Cloud Functions is an event-driven serverless compute platform. Cloud Functions allows you to write your code without worrying about provisioning resources or scaling to handle changing requirements. This repository provide you a glimpse of
@@ -34,13 +36,17 @@ gcloud beta functions deploy myWebsiteBackend --trigger-http --runtime nodejs10
 
 -   Once the function got deployed you will receive the `endpoint` printed in the `console. Grab the endpoint
 
--   import the postman collection and environment [stored in the postman folder] into postman. Go to the environment and update the `url` you just received after deploying your function. Re-export the environment and update the file in the repo. This step sucks, I know. It should be automated.
-
 -   Push this as a new repository in your own Github/any-other source code management space.
 
 -   Create a trigger with installing [github Could Build App](https://github.com/marketplace/google-cloud-build) for your repository.
 
--   Now go to the [Cloud Build]() console and trigger the run or push a commit to your repo. You can see the magic happening.
+-   Now go to the [Cloud Build](https://console.cloud.google.com/cloud-build) console and navigate to `Trigger` section. Create a new trigger of your choice. Just keep in mind to provide a `user substitute` value with your grabbed url in earlier function deployment stage
+
+![trigger](./docs/trigger.png)
+
+-   Now, trigger the run or push a commit to your repo. You can see the magic happening in the newly triggered build.
+
+![log](./docs/build-log.png)
 
 #### More
 
