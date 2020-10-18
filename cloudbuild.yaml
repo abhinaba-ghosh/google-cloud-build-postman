@@ -2,6 +2,14 @@ steps:
 - name: node
   entrypoint: npm
   args: ['install']
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - functions
+  - deploy
+  - myWebsiteBackend
+  - --source=.
+  - --trigger-http
+  - --runtime nodejs10
 - name: node
   entrypoint: npm
   args: ['test']

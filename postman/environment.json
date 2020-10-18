@@ -1,0 +1,14 @@
+{
+	"id": "b9a941c1-91fe-407a-9fdf-97c201026551",
+	"name": "MyWebsiteBackendEnv",
+	"values": [
+		{
+			"key": "url",
+			"value": "https://us-central1-postman-collection-runner.cloudfunctions.net/myWebsiteBackend",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2020-10-18T14:43:40.453Z",
+	"_postman_exported_using": "Postman/7.34.0"
+}

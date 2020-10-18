@@ -1,21 +1,25 @@
 {
 	"info": {
-		"_postman_id": "72bbe6fa-99b3-43a6-8132-ee3b919ef2a2",
-		"name": "PetStore",
+		"_postman_id": "ef0fcb19-fd2d-4782-89aa-e57a27fb6bc9",
+		"name": "MyWebsiteBackEnd",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "GET Stores",
+			"name": "GET Portfolio",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "6f78b26a-d4fe-47ee-82ac-f15587901190",
+						"id": "fc54a3ac-e862-4034-9615-ec85f55d75c9",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
-							"});"
+							"});",
+							"",
+							"pm.test(\"Check the Contract is perefct!\", function(){",
+							"    pm.expect(pm.response.json()[0]).to.contains.keys(['img','caption','title']);",
+							"})"
 						],
 						"type": "text/javascript"
 					}
@@ -31,13 +35,13 @@
 					}
 				],
 				"url": {
-					"raw": "{{url}}/store/inventory",
+					"raw": "{{url}}/api/portfolio",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"store",
-						"inventory"
+						"api",
+						"portfolio"
 					]
 				}
 			},
