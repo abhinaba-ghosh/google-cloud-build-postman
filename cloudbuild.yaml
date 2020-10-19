@@ -2,6 +2,9 @@ steps:
 - name: node
   entrypoint: npm
   args: ['install']
+- name: node
+  entrypoint: npm
+  args: ['run','test:unit']
 - name: 'gcr.io/cloud-builders/gcloud'
   args:
   - functions
@@ -11,6 +14,6 @@ steps:
   - --trigger-http
 - name: node
   entrypoint: npm
-  args: ['test']
+  args: ['run','test:system']
   env:
     - 'URL=${_MY_DEPLOYED_URL}'

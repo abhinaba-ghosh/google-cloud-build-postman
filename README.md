@@ -28,6 +28,12 @@ npm start
 
 -   if all runs well, navigate to the browser and open `http://localhost:8081/api/portfolio`. It should show the json response.
 
+-   Run unit test with command
+
+```
+npm run test:unit
+```
+
 -   Stop the local service and deploy it to the GCP
 
 ```
