@@ -56,7 +56,7 @@ gcloud beta functions deploy myWebsiteBackend --trigger-http --runtime nodejs10
 
 #### More
 
-Find more in this [ Medium Article](*)
+Find more in this [ Medium Article](https://medium.com/@abhinabaghosh.1994/how-postman-and-google-cloud-build-helps-you-ship-cloud-functions-faster-cbfd4c424bac)
 
 #### Suggestions/PR
 
